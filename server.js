@@ -31,7 +31,7 @@ fbref.on('value', function(snapshot) {
   note.alert = data.message;
   note.payload = {'messageFrom': 'S3 Alert Server'};
 
-  apnConnection.pushNotification(note, myDevice);
+  // apnConnection.pushNotification(note, myDevice);
 })
 
 app.use(multer({ dest: './uploads/',
