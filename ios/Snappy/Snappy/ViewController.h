@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Firebase/Firebase.h>
 
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *labelPrompt;
+@property (strong, nonatomic) IBOutlet UIImageView *imagePrompt;
 
+@property (strong, nonatomic) Firebase *fb;
 
 @end
 
