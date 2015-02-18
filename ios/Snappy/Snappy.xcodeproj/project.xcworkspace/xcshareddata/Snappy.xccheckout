@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C31B6AF6-5F00-4C28-A136-795406C72C78</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Snappy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F678D6C91CCA58E8DF9657AB3B090C1713263BA5</key>
+		<string>https://github.com/poofytoo/photoaday.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/Snappy/Snappy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F678D6C91CCA58E8DF9657AB3B090C1713263BA5</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/poofytoo/photoaday.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F678D6C91CCA58E8DF9657AB3B090C1713263BA5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F678D6C91CCA58E8DF9657AB3B090C1713263BA5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>filelisten</string>
+		</dict>
+	</array>
+</dict>
+</plist>

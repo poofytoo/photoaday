@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7M5-6K-qi3">
+                                <rect key="frame" x="169" y="617" width="36" height="30"/>
+                                <state key="normal" title="Snap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sq-xe-w8m">
+                                <rect key="frame" x="238" y="617" width="44" height="30"/>
+                                <state key="normal" title="record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Slb-II-r3O">
+                                <rect key="frame" x="65" y="617" width="51" height="30"/>
+                                <state key="normal" title="camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="camera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6VN-dM-3IZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4sq-xe-w8m" firstAttribute="baseline" secondItem="7M5-6K-qi3" secondAttribute="baseline" id="40i-4Z-bx3"/>
+                            <constraint firstItem="4sq-xe-w8m" firstAttribute="baseline" secondItem="Slb-II-r3O" secondAttribute="baseline" id="8Os-ab-eEH">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-4"/>
+                            </constraint>
+                            <constraint firstItem="4sq-xe-w8m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lfj-tp-Wqm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4sq-xe-w8m" secondAttribute="trailing" constant="77" id="X3U-GS-Hp3"/>
+                            <constraint firstItem="7M5-6K-qi3" firstAttribute="leading" secondItem="Slb-II-r3O" secondAttribute="trailing" constant="53" id="XwF-XU-lS1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-167"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="4sq-xe-w8m" secondAttribute="bottom" constant="20" symbolic="YES" id="b6T-Fm-Vk8"/>
+                            <constraint firstItem="7M5-6K-qi3" firstAttribute="leading" secondItem="Slb-II-r3O" secondAttribute="trailing" constant="53" id="hlA-fa-KUy">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-167"/>
+                            </constraint>
+                            <constraint firstItem="4sq-xe-w8m" firstAttribute="leading" secondItem="7M5-6K-qi3" secondAttribute="trailing" constant="33" id="oK8-Gz-NXI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Lfj-tp-Wqm"/>
+                                <exclude reference="hlA-fa-KUy"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="Lfj-tp-Wqm"/>
+                                <include reference="hlA-fa-KUy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="Slb-II-r3O" id="dyr-sz-Am3"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="801.75" y="164.5"/>
+        </scene>
+    </scenes>
+</document>
