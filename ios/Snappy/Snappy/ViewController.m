@@ -58,11 +58,6 @@
     [self presentViewController:self.imagePickerController animated:NO completion:nil];
 }
 
-- (IBAction)done:(id)sender
-{
-    [self finishAndUpdate];
-}
-
 - (void)finishAndUpdate
 {
     [self dismissViewControllerAnimated:NO completion:NULL];

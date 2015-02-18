@@ -16,8 +16,8 @@
 		57C3D7781A93DD21002C4CBB /* SnappyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C3D7771A93DD21002C4CBB /* SnappyTests.m */; };
 		57C3D7BA1A9461D4002C4CBB /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C3D7B91A9461D4002C4CBB /* OverlayView.xib */; };
 		57C3D7BC1A946708002C4CBB /* OverlayView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C3D7BB1A946708002C4CBB /* OverlayView2.xib */; };
-		57D2D4F51A94823B005E976B /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D2D4F41A94823B005E976B /* camera@2x.png */; };
-		57D2D4F71A9482A4005E976B /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D2D4F61A9482A4005E976B /* camera.png */; };
+		57D2D4FA1A94841D005E976B /* cam.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D2D4F81A94841D005E976B /* cam.png */; };
+		57D2D4FB1A94841D005E976B /* cam@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D2D4F91A94841D005E976B /* cam@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +46,8 @@
 		57C3D7771A93DD21002C4CBB /* SnappyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SnappyTests.m; sourceTree = "<group>"; };
 		57C3D7B91A9461D4002C4CBB /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 		57C3D7BB1A946708002C4CBB /* OverlayView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView2.xib; sourceTree = "<group>"; };
-		57D2D4F41A94823B005E976B /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
-		57D2D4F61A9482A4005E976B /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		57D2D4F81A94841D005E976B /* cam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cam.png; sourceTree = "<group>"; };
+		57D2D4F91A94841D005E976B /* cam@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cam@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +74,8 @@
 				57C3D75A1A93DD21002C4CBB /* Snappy */,
 				57C3D7741A93DD21002C4CBB /* SnappyTests */,
 				57C3D7591A93DD21002C4CBB /* Products */,
-				57D2D4F41A94823B005E976B /* camera@2x.png */,
-				57D2D4F61A9482A4005E976B /* camera.png */,
+				57D2D4F81A94841D005E976B /* cam.png */,
+				57D2D4F91A94841D005E976B /* cam@2x.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,8 +212,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C3D7671A93DD21002C4CBB /* Main.storyboard in Resources */,
-				57D2D4F71A9482A4005E976B /* camera.png in Resources */,
-				57D2D4F51A94823B005E976B /* camera@2x.png in Resources */,
+				57D2D4FA1A94841D005E976B /* cam.png in Resources */,
+				57D2D4FB1A94841D005E976B /* cam@2x.png in Resources */,
 				57C3D7BA1A9461D4002C4CBB /* OverlayView.xib in Resources */,
 				57C3D76C1A93DD21002C4CBB /* LaunchScreen.xib in Resources */,
 				57C3D7BC1A946708002C4CBB /* OverlayView2.xib in Resources */,
