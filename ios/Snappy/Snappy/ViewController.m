@@ -16,6 +16,7 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) IBOutlet UIImageView *imagePreview;
 
+@property (nonatomic) BOOL *hasTakenPhoto;
 @property (nonatomic) NSString *U_ID;
 @property (nonatomic) NSString *dayID;
 @property (nonatomic) UIImage *activeImage;
@@ -32,12 +33,16 @@
     self.U_ID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     NSLog(@"Device ID: %@", self.U_ID);
+    [self checkHasTakenPhoto];
+    
     NSLog(@"View Loaded");
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     if (self.activeImage == nil) {
-        [self openCameraPane];
+        if (!self.hasTakenPhoto) {
+            [self openCameraPane];
+        }
         
         [self.currentFb observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
             NSLog(@"Fetching new Firebase Data...");
@@ -60,11 +65,11 @@
 - (IBAction)takePhoto:(id)sender {
     [self.imagePickerController takePicture];
     
-    Firebase *hopperRef = [self.fb childByAppendingPath: [NSString stringWithFormat: @"userData/%@", self.U_ID]];
+    Firebase *userRef = [self.fb childByAppendingPath: [NSString stringWithFormat: @"userData/%@", self.U_ID]];
     
     NSLog(@"Day ID: %@", self.dayID);
     NSDictionary *entry = [[NSDictionary alloc] initWithObjectsAndKeys:@"uploaded", [NSString stringWithFormat: @"%@", self.dayID], nil];
-    [hopperRef updateChildValues: entry];
+    [userRef updateChildValues: entry];
     
 }
 
@@ -104,9 +109,8 @@
     self.imagePickerController = nil;
 }
 
--(void) updatePrompt
+- (void) updatePrompt
 {
-    
     [self.currentFb observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSLog(@"Fetching new Firebase Data...");
         self.labelBasePrompt.text = snapshot.value[@"textPrompt"];
@@ -119,8 +123,26 @@
         
         self.dayID = snapshot.value[@"dayID"];
     }];
-
 }
+
+- (void) checkHasTakenPhoto
+{
+    Firebase *userRef = [self.fb childByAppendingPath:@"userData"];
+    [userRef observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        NSDictionary *data = snapshot.value[[NSString stringWithFormat: @"%@", self.U_ID]];
+        NSLog(@"self.dayID %@", data);
+        if ([data objectForKey:[NSString stringWithFormat: @"%@", self.dayID]] == nil) {
+            NSLog(@"No Photo Taken Yet");
+        } else {
+            NSLog(@"User has Taken Photo");
+            
+            // TODO: make less jank.
+            self.hasTakenPhoto = YES;
+            [self dismissViewControllerAnimated:NO completion:NULL];
+        }
+    }];
+}
+
 - (void) uploadPhoto
 {
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
