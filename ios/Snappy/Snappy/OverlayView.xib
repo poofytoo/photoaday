@@ -71,15 +71,6 @@
                         <constraint firstAttribute="width" secondItem="6Av-Cu-HZc" secondAttribute="height" multiplier="1:1" id="MRM-po-dbz"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PROMPT:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTF-hO-F9W">
-                    <rect key="frame" x="167" y="341" width="60" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="21" id="kKD-nb-Jcz"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
-                    <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    <color key="highlightedColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading Prompt of the day.." lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMZ-ep-yyT">
                     <rect key="frame" x="167" y="340" width="138" height="128"/>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
@@ -94,7 +85,7 @@
                 <constraint firstAttribute="trailing" secondItem="HMZ-ep-yyT" secondAttribute="trailing" constant="14" id="CBT-I6-SOt"/>
                 <constraint firstItem="HMZ-ep-yyT" firstAttribute="bottom" secondItem="6Av-Cu-HZc" secondAttribute="bottom" id="ETc-zz-YNW"/>
                 <constraint firstAttribute="trailing" secondItem="ZzM-ea-v3j" secondAttribute="trailing" id="GmS-2I-veu"/>
-                <constraint firstItem="HMZ-ep-yyT" firstAttribute="leading" secondItem="UTF-hO-F9W" secondAttribute="leading" id="Mc5-19-Gbx"/>
+                <constraint firstItem="HMZ-ep-yyT" firstAttribute="leading" secondItem="6Av-Cu-HZc" secondAttribute="trailing" constant="20" id="KTp-hM-F23"/>
                 <constraint firstItem="H2e-VO-vgD" firstAttribute="leading" secondItem="37" secondAttribute="leading" id="Ptp-a2-GJq"/>
                 <constraint firstItem="6Av-Cu-HZc" firstAttribute="leading" secondItem="37" secondAttribute="leading" constant="20" id="QiH-0B-KOY"/>
                 <constraint firstAttribute="trailing" secondItem="H2e-VO-vgD" secondAttribute="trailing" id="Qzy-eW-r34"/>
@@ -103,8 +94,6 @@
                 <constraint firstAttribute="bottom" secondItem="8O3-BF-zLD" secondAttribute="bottom" id="YVV-hJ-ygb"/>
                 <constraint firstAttribute="trailing" secondItem="LVq-ii-Xb7" secondAttribute="trailing" id="aRw-OC-a0z"/>
                 <constraint firstItem="8O3-BF-zLD" firstAttribute="top" secondItem="ZzM-ea-v3j" secondAttribute="bottom" id="dhb-Y3-gwA"/>
-                <constraint firstItem="UTF-hO-F9W" firstAttribute="top" secondItem="6Av-Cu-HZc" secondAttribute="top" id="dhe-vf-aFS"/>
-                <constraint firstItem="UTF-hO-F9W" firstAttribute="leading" secondItem="6Av-Cu-HZc" secondAttribute="trailing" constant="20" id="gFw-d9-6Ru"/>
                 <constraint firstItem="LVq-ii-Xb7" firstAttribute="leading" secondItem="37" secondAttribute="leading" id="k8V-7t-muK"/>
                 <constraint firstAttribute="centerX" secondItem="8O3-BF-zLD" secondAttribute="centerX" id="kaB-Sw-qhU"/>
                 <constraint firstItem="HMZ-ep-yyT" firstAttribute="top" secondItem="6Av-Cu-HZc" secondAttribute="top" id="koH-Sz-lAL"/>
