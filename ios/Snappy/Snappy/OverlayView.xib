@@ -64,8 +64,15 @@
                     <nil key="highlightedColor"/>
                     <size key="shadowOffset" width="0.0" height="0.0"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROMPT:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTF-hO-F9W">
-                    <rect key="frame" x="165" y="341" width="62" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Av-Cu-HZc">
+                    <rect key="frame" x="20" y="340" width="128" height="128"/>
+                    <color key="backgroundColor" red="1" green="0.46895559209999998" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="6Av-Cu-HZc" secondAttribute="height" multiplier="1:1" id="MRM-po-dbz"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PROMPT:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTF-hO-F9W">
+                    <rect key="frame" x="167" y="341" width="60" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="kKD-nb-Jcz"/>
                     </constraints>
@@ -73,15 +80,8 @@
                     <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <color key="highlightedColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Av-Cu-HZc">
-                    <rect key="frame" x="20" y="341" width="125" height="125"/>
-                    <color key="backgroundColor" red="1" green="0.46895559209999998" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="6Av-Cu-HZc" secondAttribute="height" multiplier="1:1" id="MRM-po-dbz"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo of your first meal. Try to match the image to the left" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMZ-ep-yyT">
-                    <rect key="frame" x="165" y="341" width="141" height="125"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Loading Prompt of the day.." lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HMZ-ep-yyT">
+                    <rect key="frame" x="167" y="340" width="138" height="128"/>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     <color key="highlightedColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -108,9 +108,8 @@
                 <constraint firstItem="LVq-ii-Xb7" firstAttribute="leading" secondItem="37" secondAttribute="leading" id="k8V-7t-muK"/>
                 <constraint firstAttribute="centerX" secondItem="8O3-BF-zLD" secondAttribute="centerX" id="kaB-Sw-qhU"/>
                 <constraint firstItem="HMZ-ep-yyT" firstAttribute="top" secondItem="6Av-Cu-HZc" secondAttribute="top" id="koH-Sz-lAL"/>
-                <constraint firstItem="6Av-Cu-HZc" firstAttribute="top" secondItem="LVq-ii-Xb7" secondAttribute="bottom" constant="21" id="lvh-d9-Bql"/>
-                <constraint firstItem="8O3-BF-zLD" firstAttribute="top" secondItem="6Av-Cu-HZc" secondAttribute="bottom" constant="22" id="umd-pS-9US"/>
-                <constraint firstAttribute="trailing" secondItem="UTF-hO-F9W" secondAttribute="trailing" constant="93" id="vIa-k3-Elw"/>
+                <constraint firstItem="6Av-Cu-HZc" firstAttribute="top" secondItem="LVq-ii-Xb7" secondAttribute="bottom" constant="20" id="lvh-d9-Bql"/>
+                <constraint firstItem="8O3-BF-zLD" firstAttribute="top" secondItem="6Av-Cu-HZc" secondAttribute="bottom" constant="20" id="umd-pS-9US"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="256" y="259"/>

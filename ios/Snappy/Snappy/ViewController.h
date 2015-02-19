@@ -12,6 +12,8 @@
 @interface ViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *labelPrompt;
 @property (strong, nonatomic) IBOutlet UIImageView *imagePrompt;
+@property (strong, nonatomic) IBOutlet UILabel *labelBasePrompt;
+@property (strong, nonatomic) IBOutlet UIImageView *imageBasePrompt;
 
 @property (strong, nonatomic) Firebase *fb;
 

@@ -31,7 +31,7 @@ fbref.on('value', function(snapshot) {
   note.alert = data.message;
   note.payload = {'messageFrom': 'S3 Alert Server'};
 
-  // apnConnection.pushNotification(note, myDevice);
+   apnConnection.pushNotification(note, myDevice);
 })
 
 app.use(multer({ dest: './uploads/',
@@ -54,10 +54,16 @@ app.get('/', function(req,res){
 });
 
 app.post('/api/photo', function(req,res){
+  console.log('server hit with an image');
+  console.log(req.params);
+  console.log(req.body);
+
   if (done == true){
     console.log(req.files);
     res.end("File uploaded.");
   }
+  res.end();
+
 });
 
 /*Run the server.*/
