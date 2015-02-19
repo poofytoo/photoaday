@@ -16,6 +16,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageBasePrompt;
 
 @property (strong, nonatomic) Firebase *fb;
+@property (strong, nonatomic) Firebase *currentFb;
+
 
 @end
 

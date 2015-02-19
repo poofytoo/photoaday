@@ -16,6 +16,8 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *doneButton;
 @property (strong, nonatomic) IBOutlet UIImageView *imagePreview;
 
+@property (nonatomic) NSString *U_ID;
+@property (nonatomic) NSString *dayID;
 @property (nonatomic) UIImage *activeImage;
 @property (nonatomic) NSMutableArray *capturedImages;
 @property (nonatomic) UIImagePickerController *imagePickerController;
@@ -26,7 +28,10 @@
 - (void) viewDidLoad {
     [super viewDidLoad];
     self.fb = [[Firebase alloc] initWithUrl: @"https://az.firebaseio.com/snappy"];
+    self.currentFb = [[Firebase alloc] initWithUrl: @"https://az.firebaseio.com/snappy/currentDay"];
+    self.U_ID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
+    NSLog(@"Device ID: %@", self.U_ID);
     NSLog(@"View Loaded");
 }
 
@@ -34,7 +39,7 @@
     if (self.activeImage == nil) {
         [self openCameraPane];
         
-        [self.fb observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        [self.currentFb observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
             NSLog(@"Fetching new Firebase Data...");
             self.labelBasePrompt.text = snapshot.value[@"textPrompt"];
             self.labelPrompt.text = snapshot.value[@"textPrompt"];
@@ -43,6 +48,8 @@
             UIImage * image = [UIImage imageWithData:imageData];
             [self.imagePrompt setImage:image];
             [self.imageBasePrompt setImage:image];
+            
+            self.dayID = snapshot.value[@"dayID"];
         }];
     }
 }
@@ -52,6 +59,13 @@
 
 - (IBAction)takePhoto:(id)sender {
     [self.imagePickerController takePicture];
+    
+    Firebase *hopperRef = [self.fb childByAppendingPath: [NSString stringWithFormat: @"userData/%@", self.U_ID]];
+    
+    NSLog(@"Day ID: %@", self.dayID);
+    NSDictionary *entry = [[NSDictionary alloc] initWithObjectsAndKeys:@"uploaded", [NSString stringWithFormat: @"%@", self.dayID], nil];
+    [hopperRef updateChildValues: entry];
+    
 }
 
 - (IBAction)retakePhoto:(id)sender {
@@ -93,7 +107,7 @@
 -(void) updatePrompt
 {
     
-    [self.fb observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+    [self.currentFb observeSingleEventOfType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSLog(@"Fetching new Firebase Data...");
         self.labelBasePrompt.text = snapshot.value[@"textPrompt"];
         self.labelPrompt.text = snapshot.value[@"textPrompt"];
@@ -102,6 +116,8 @@
         UIImage * image = [UIImage imageWithData:imageData];
         [self.imagePrompt setImage:image];
         [self.imageBasePrompt setImage:image];
+        
+        self.dayID = snapshot.value[@"dayID"];
     }];
 
 }
