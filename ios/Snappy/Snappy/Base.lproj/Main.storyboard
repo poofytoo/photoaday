@@ -81,7 +81,7 @@
                                         <variation key="heightClass=regular-widthClass=compact" constant="114"/>
                                     </constraint>
                                     <constraint firstAttribute="height" constant="80" id="AAM-uC-Iai">
-                                        <variation key="heightClass=regular-widthClass=compact" constant="89.5"/>
+                                        <variation key="heightClass=regular-widthClass=compact" constant="80"/>
                                     </constraint>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="qac-re-x9g"/>
                                 </constraints>
@@ -180,6 +180,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="YCc-iD-5XT" secondAttribute="trailing" id="Rdt-Zf-N2K"/>
+                            <constraint firstAttribute="bottom" secondItem="DTG-BU-hYB" secondAttribute="bottom" id="TG1-Ox-0m9"/>
                             <constraint firstItem="FyH-HN-SqB" firstAttribute="top" secondItem="DTG-BU-hYB" secondAttribute="top" id="b0e-6x-9Lw"/>
                             <constraint firstAttribute="trailing" secondItem="FyH-HN-SqB" secondAttribute="trailing" id="bPc-vA-qNp"/>
                             <constraint firstItem="Dc9-lE-5Wb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="-2" id="d8b-ap-gex"/>
@@ -187,7 +188,7 @@
                             <constraint firstItem="Dc9-lE-5Wb" firstAttribute="leading" secondItem="io5-go-P3X" secondAttribute="leading" id="fpR-sv-hOg"/>
                             <constraint firstItem="YCc-iD-5XT" firstAttribute="width" secondItem="YCc-iD-5XT" secondAttribute="height" multiplier="1:1" id="hTs-iU-Y8w"/>
                             <constraint firstItem="FyH-HN-SqB" firstAttribute="bottom" secondItem="DTG-BU-hYB" secondAttribute="bottom" id="jtm-Jk-yZd">
-                                <variation key="heightClass=regular-widthClass=compact" constant="-9.5"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="gWA-yn-rzp" firstAttribute="top" secondItem="YCc-iD-5XT" secondAttribute="bottom" id="lY5-XX-a1a"/>
                             <constraint firstItem="DTG-BU-hYB" firstAttribute="top" secondItem="wWZ-ZJ-mRN" secondAttribute="bottom" constant="20" id="mn4-Tg-vLk"/>
@@ -263,6 +264,7 @@
                                 <exclude reference="wek-WL-P3y"/>
                                 <exclude reference="LBQ-QY-xMe"/>
                                 <exclude reference="OMi-KP-CW2"/>
+                                <exclude reference="TG1-Ox-0m9"/>
                                 <exclude reference="mn4-Tg-vLk"/>
                                 <exclude reference="FfG-bq-bWQ"/>
                                 <exclude reference="ohn-bA-js1"/>
@@ -326,6 +328,7 @@
                                 <include reference="wek-WL-P3y"/>
                                 <include reference="LBQ-QY-xMe"/>
                                 <include reference="OMi-KP-CW2"/>
+                                <include reference="TG1-Ox-0m9"/>
                                 <include reference="mn4-Tg-vLk"/>
                                 <exclude reference="FfG-bq-bWQ"/>
                                 <exclude reference="ohn-bA-js1"/>
